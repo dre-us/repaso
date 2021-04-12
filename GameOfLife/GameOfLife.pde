@@ -1,3 +1,4 @@
+//credits:
 //https://processing.org/examples/gameoflife.html
 
 
@@ -81,6 +82,14 @@ void seed() {
   }
 }
 
+void clear_grid() {
+  for (int i = 0; i < curr_state.length; ++i) {
+    for (int j = 0; j < curr_state[i].length; ++j) {
+      curr_state[i][j] = DEAD;
+    }
+  }
+}
+
 void mousePressed() {
   if (mouseButton == LEFT && pause) {
     int i = int(mouseY/cellSize);
@@ -94,14 +103,11 @@ void keyPressed() {
     pause = !pause;
   }
   if (key == 'a') {
+    clear_grid();
     seed();
   }
   if (key == 'c' || key == 'C') {
-    for (int i = 0; i < curr_state.length; ++i) {
-      for (int j = 0; j < curr_state[i].length; ++j) {
-        curr_state[i][j] = DEAD;
-      }
-    }
+    clear();
   }
   if (key == 'w' || key == 's') {
     int delta = key == 'w' ? 1 : -1;
