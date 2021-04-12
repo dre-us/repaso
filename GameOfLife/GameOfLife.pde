@@ -107,7 +107,7 @@ void keyPressed() {
     seed();
   }
   if (key == 'c' || key == 'C') {
-    clear();
+    clear_grid();
   }
   if (key == 'w' || key == 's') {
     int delta = key == 'w' ? 1 : -1;
