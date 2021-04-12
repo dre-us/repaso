@@ -2,7 +2,7 @@
 
 # Teclas
 espacio -> pausar o iniciar simulación <br/>
-a -> crear un patron aleatorio <br/>
+a -> crear un patrón aleatorio <br/>
 w -> aumentar velocidad de la simulación <br/>
 s -> disminuir velocidad de la simulación <br/>
 c -> limpiar tablero <br/>
